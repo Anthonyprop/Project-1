@@ -1,0 +1,397 @@
+/* Home.html stylesheet */
+html, body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	background-image: url("logo1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: black;
+}
+
+.logo {
+	color: rgb(226, 226, 226);
+	letter-spacing: 5px;
+	font-size: 30px;
+}
+
+
+
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.nav-links a {
+	color: rgb(226, 226, 226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226, 226, 226);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+/* Desktop screen Only */
+@media screen and (max-width: 1250px) {
+	.nav-links {
+		display: flex;
+		justify-content: space-around;
+		width: 50%;
+	}
+}
+
+/* Tablet screen Only */
+@media screen and (max-width: 1128px) {
+	.nav-links {
+		width: 80%;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+/* Moblie screen Only */
+@media screen and (max-width: 768px) {
+	html, body {
+		overflow-x: hidden;
+	}
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+
+	.nav-links li {
+		opacity: 0;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#footer {
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+	color: rgb(226,226,226);
+}
+
+.header {
+	position: center;
+	margin: auto;
+	padding: auto;
+}
+
+.header h1 {
+	font-size: 80px;
+	margin: 80px;
+	padding: 20px;
+	text-shadow: 2px 2px 6px white;
+}
+
+h1:hover {
+	color: rgb(226,226,226);
+}
+
+img#logo2 {
+	width: 530px;
+	height: 530px;
+}
+
+img#logo3 {
+	width: 530px;
+	height: 530px;
+}
+
+img#logo4 {
+	width: 530px;
+	height: 530px;
+}
+
+img#logo5 {
+	width: 530px;
+	height: 530px;
+}
+
+/* menu.html stylesheet */
+article {
+	background-color: rgba(0,0,0,0.5);
+	color: rgb(226,226,226);
+	font-size: 40px;
+}
+
+article dd {
+	font-size: 20px;
+}
+
+
+/* catering.html shtylesheet */
+img#logo6 {
+	width: 400px;
+	height: 400px;
+	float: right;
+}
+
+h1#title {
+	color: rgb(226,226,226);
+	font-size: 30px;
+}
+
+p {
+	font-size: 20px;
+	color: rgb(226,226,226);
+}
+
+/* contact.html stylesheet */
+h1#con {
+	color: rgb(226,226,226);
+	font-size: 40px;
+}
+
+#pg {
+	font-size: 25px;
+}
+
+#isl {
+	color:rgb(226,226,226);
+	font-size: 25px;
+}
+
+/* Stylesheet for survey.html */
+
+/* Form layout styles */
+
+form#survey {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+	background-color: rgb(226,226,226);
+	border-radius: 20px;
+	-webkit-flex: 1 1 300px;
+	flex: 1 1 300px;
+	font-size: 0.85em;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+div.formRow {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: 7px 0px;
+}
+
+div.formRow > * {
+	-webkit-flex: 1 1 150px;
+	flex: 1 1 150px;
+}
+
+/* Legend Styles */
+
+legend {
+	background-color: rgb(179,20,25);
+	color: white;
+	padding: 5px;
+}
+
+/* Cross browser styling */
+input::-webkit-input-placeholder {
+	color: rgb(255,151,151);
+}
+
+input:-ms-input-placeholder {
+	color: rgb(255,151,151);
+}
+
+input::-moz-placeholder {
+	color: rgb(255,151,151);
+}
+
+/* Text area styling */
+
+textarea {
+	margin-top: 10px;
+	height: 100px;
+	width: 95%;
+}
+
+/* Spinner styles */
+
+div.formRow > input#dineSpin {
+	-webkit-flex: 0 0 50px;
+	flex: 0 0 50px;
+}
+
+/* Form button styles */
+div#buttons {
+	text-align: center;
+	width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+	font-size: 1.2em;
+	padding: 5px;
+	margin: 15px;
+}
+
+/* validation styles  */
+input:focus, select:focus, textarea:focus {
+	background-color: rgb(220,255,220);
+}
+
+input#name:focus:valid, 
+input#zip:focus:valid, 
+input#phone:focus:valid, 
+input#mail:focus:valid {
+	background-color: rgb(220,255,220);
+}
+
+input#name:focus:valid, 
+input#zip:focus:valid, 
+input#phone:focus:valid, 
+input#mail:focus:valid {
+	background-color: rgb(255,232,233);
+}
+
+/* style for clock.html */
+
+#logoImg {
+	width: 500px;
+	height: 400px;
+}
+
+/* Time Clock Styles */
+
+div#dateNow {
+   display: block;
+   position: absolute;
+   top: 35px;
+   left: 10px;   
+   background-color: transparent;
+   border: hidden;
+   color: rgba(255, 192, 82, 0.8);
+   width: 140px;
+   font-size: 0.9em;
+   line-height: 1.1em;
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   font-weight: normal;
+}
+
+/* Styles for the Countdown Clock */
+
+div#countdown {
+   position: absolute;
+   bottom: 50px;
+   right: 15px;
+   width: 45%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+
+}
+
+div#countdown div {
+   display: block;
+   text-align: center;
+   width: 100%;
+   line-height: 1.2em;
+   font-size: 30px;
+   font-family: segment14, sans-serif;
+   color: white;
+   margin: 0px 10px;
+   color: white;
+   text-align: center;
+   text-shadow: 0px 0px 2px black, 0px 0px 4px black, -1px 1px 8px white, 
+                1px -1px 8px white, -1px 1px 12px white, 1px -1px 12px white;
+}
+
+div#countdown div span {
+   font-size: 2em;   
+}
+
+header > h2 {
+   position: absolute;
+   top: 5px;
+   left: 10px;
+   font-size: 0.9em;
+   font-weight: normal;
+   color: rgba(255, 192, 82, 0.8);
+}
+
+header, h1 {
+	color: rgb(226,30,30);
+}
+
+
+
+
